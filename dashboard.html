@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en" scroll="smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script async crossorigin="anonymous"
+      data-clerk-publishable-key="pk_test_Y2FsbS1naWJib24tMC5jbGVyay5hY2NvdW50cy5kZXYk"
+      src="https://cdn.jsdelivr.net/npm/@clerk/clerk-js@latest/dist/clerk.browser.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>BILL_PE | Dashboard | Never Lose a Bill Again</title>
+  </head>
+
+  <body class="bg-stone-300">
+   
+    <!-- nav bar -->
+    <nav class="flex items-center justify-between p-4 m-4 border-2 border-green-900 rounded-lg  ">
+        <div class="flex items-center space-x-4">
+            <a href="#" class="text-green-900 text-3xl font-bold">BILL_PE</a>
+        </div>
+
+        <div class="hidden md:flex items-center space-x-6">
+            <a href="dashboard.html" class="text-stone-700 font-semibold hover:text-green-900">Dashboard
+            </a>
+            <a href="dashboard.html#feature" class="text-stone-700 font-semibold hover:text-green-900">Features</a>
+            <a href="dashboard.html#sponsor" class="text-stone-700 font-semibold hover:text-green-900">Sponsor</a>
+        </div>
+
+        <div class="flex justify-end p-1">
+            <button id="signOut" class="bg-stone-600 text-white px-4 py-2 rounded-md hover:bg-red-700">Sign Out</button>
+        </div>
+    </nav>
+    <!-- nav bar -->
+  
+    <!-- Main Section -->
+    <section class="px-6 py-16 mb-0">
+        <div id="dashboard-content" class="flex flex-col items-center justify-center min-h-screen px-4 text-center">
+            <h1 id="feature" class="text-4xl font-bold text-green-800 m-5 mt-0 mb-4">Welcome, <span id="user-name"></span> </h1>
+            <p class="text-stone-700 mb-15  ">
+                This is your secure BILL_PE dashboard. Only you can see this page.
+            </p>
+
+            <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                <!-- Card 1 -->
+                <a href="fill.html" class="group bg-stone-700 hover:bg-stone-600 transition-all duration-300 rounded-2xl p-6 shadow-lg hover:shadow-2xl flex flex-col items-center text-center">
+                    <img src="assets/img/fill.jpg" alt="Fill Icon" class="rounded-xl mb-4 w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <h3 class="text-xl font-semibold text-white mb-2"><i>Fill a Bill</i></h3>
+                    <p class="text-stone-300 text-sm">Manually enter your bill details into our system for easy tracking and management.</p>
+                </a>
+
+                <!-- Card 2 -->
+                <a href="#" class="group bg-stone-700 hover:bg-stone-600 transition-all duration-300 rounded-2xl p-6 shadow-lg hover:shadow-2xl flex flex-col items-center text-center">
+                    <img src="assets/img/scan.jpg" alt="Scan Icon" class="rounded-xl mb-4 w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <h3 class="text-xl font-semibold text-white mb-2"><i>Scan a Bill</i></h3>
+                    <p class="text-stone-300 text-sm">Use our scanning feature to quickly upload and digitize your physical bills.</p>
+                </a>
+
+                <!-- Card 3 -->
+                <a href="#" class="group bg-stone-700 hover:bg-stone-600 transition-all duration-300 rounded-2xl p-6 shadow-lg hover:shadow-2xl flex flex-col items-center text-center">
+                    <img src="assets/img/ai.jpg" alt="AI Insights Icon" class="rounded-xl mb-4 w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <h3 class="text-xl font-semibold text-white mb-2"><i>AI Insights</i></h3>
+                    <p class="text-stone-300 text-sm">Leverage AI to gain insights into your billing patterns and optimize your expenses.</p>
+                </a>
+
+                <!-- Card 4 -->
+                <a href="#" class="group bg-stone-700 hover:bg-stone-600 transition-all duration-300 rounded-2xl p-6 shadow-lg hover:shadow-2xl flex flex-col items-center text-center">
+                    <img src="assets/img/compare.jpg" alt="Compare Bills Icon" class="rounded-xl mb-4 w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <h3 class="text-xl font-semibold text-white mb-2"><i>Compare Bills</i></h3>
+                    <p class="text-stone-300 text-sm">Easily compare different bills to identify discrepancies and find better deals.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!--sponsor-->
+    <div id="sponsor" class="py-12 bg-stone-300">
+        <h2 class="text-3xl font-bold text-center text-green-900 mb-8">Support BILL_PE</h2>
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <p class="text-stone-700 mb-6">If you find BILL_PE helpful, consider supporting us to keep improving and adding new features.</p>
+         
+                <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="Shivang_sbi" data-color="#2c6c19" data-emoji="🖥️"  data-font="Comic" data-text="Support_US" data-outline-color="#ffffff" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
+            
+        </div>
+        </div>
+   <!--sponsor-->
+
+
+    <!--footer-->
+    <footer id="dashboard-content" class="sticky bg-stone-400 text-center p-4 mt-12 border-t-2 border-green-900">
+        <p class="text-stone-700">&copy; 2025 BILL_PE. All rights reserved.</p>
+    </footer>
+    <!--footer-->
+
+    <script src="dashscript.js" defer></script>
+  </body>
+</html>
